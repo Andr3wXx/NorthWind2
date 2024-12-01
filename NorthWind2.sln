@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind2.Entities", "Nort
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.ConsoleApp", "NorthWind.ConsoleApp\NorthWind.ConsoleApp.csproj", "{9C0CE055-4963-40D0-9CD8-A972621F91BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Writers", "NorthWind.Writers\NorthWind.Writers.csproj", "{70691F63-59F5-4F79-8B8A-75F7BC6CA186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9C0CE055-4963-40D0-9CD8-A972621F91BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0CE055-4963-40D0-9CD8-A972621F91BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0CE055-4963-40D0-9CD8-A972621F91BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70691F63-59F5-4F79-8B8A-75F7BC6CA186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70691F63-59F5-4F79-8B8A-75F7BC6CA186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70691F63-59F5-4F79-8B8A-75F7BC6CA186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70691F63-59F5-4F79-8B8A-75F7BC6CA186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
