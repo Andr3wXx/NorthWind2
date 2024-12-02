@@ -9,10 +9,9 @@ using System.Windows.Markup;
 //Contruccion del Host
 
 HostApplicationBuilder  Builder = Host.CreateApplicationBuilder();
-Builder.Services.AddSingleton<IUserActionWriter, DebugWriter>();
-Builder.Services.AddSingleton<IUserActionWriter, ConsoleWriter>();
-Builder.Services.AddSingleton<AppLogger>();
-Builder.Services.AddSingleton < ProductService>();
+
+Builder.Services.AddNorthWindService();
+
 using IHost AppHost = Builder.Build(); //El host de la aplicacion
 
 
@@ -21,14 +20,14 @@ using IHost AppHost = Builder.Build(); //El host de la aplicacion
 //IUserActionWriter Writer = new ConsoleWriter();
 //IUserActionWriter Writer = new DebugWriter();
 
-AppLogger Logger = AppHost.Services.GetRequiredService<AppLogger>();
+IAppLogger Logger = AppHost.Services.GetRequiredService<IAppLogger>();
 Logger.WriteLog("Application started.");
 
-ProductService Service = AppHost.Services.GetRequiredService<ProductService>();
+IProductService Service = AppHost.Services.GetRequiredService<IProductService>();
 Service.Add("Demo", "Azucar refinada");
 
 /*
  * AppLoger y los Writers: Responsabilidad unica
  * AppLoger: Abierto pero cerrado
  * AppLogger: Inversion de dependencias. los modulos de al alto nivel son independientes de los detalles de implementacion
- * 
+ */

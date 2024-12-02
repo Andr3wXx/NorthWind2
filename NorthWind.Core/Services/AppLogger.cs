@@ -9,12 +9,12 @@ using System.Xml;
 
 namespace NorthWind.ConsoleApp.Services
 {
-    internal class AppLogger(IEnumerable <IUserActionWriter> writer)
+    internal class AppLogger(IEnumerable<IUserActionWriter> writers) : IAppLogger
     {
         public void WriteLog(string message)
         {
             UserAction Log = new UserAction("System", message);
-            foreach(var Writer  in writer) 
+            foreach(var Writer  in writers) 
             Writer.Writer(Log);
         }
     }

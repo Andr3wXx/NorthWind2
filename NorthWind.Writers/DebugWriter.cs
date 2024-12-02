@@ -1,11 +1,13 @@
-﻿namespace NorthWind.Writers
+﻿using System.Diagnostics;
+
+namespace NorthWind.Writers
 {
-    public class DebugWriter : IUserActionWriter
+    internal class DebugWriter : IUserActionWriter
     {
-        public void Write(UserAction action)
+        public void Writer(UserAction action)
         {
-            Console.WriteLine("ConsoleWriter: {0}, {1}, {2}",
-                action.CreateDateTime, action.User, action.Description);
+            Debug.WriteLine("ConsoleWriter: {0}, {1}, {2}",
+               action.CreateDateTime, action.User, action.Description);
         }
     }
 }

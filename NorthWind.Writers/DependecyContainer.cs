@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NorthWind.Writers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,21 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependecyContainer
 {
-    public static IServiceCollection
+    public static IServiceCollection AddConsoleWriter(this IServiceCollection services)
+    {
+        services.AddSingleton<IUserActionWriter, ConsoleWriter>();
+        return services;
+    }
+
+    public static IServiceCollection AddDegubWriter (this IServiceCollection services)
+    {
+        services.AddSingleton<IUserActionWriter, DebugWriter>();
+        return services;
+    }
+
+    public static IServiceCollection AddFlieWriter (this IServiceCollection services)
+    {
+        services.AddSingleton<IUserActionWriter, FileWriter>();
+        return services;
+    }
 }

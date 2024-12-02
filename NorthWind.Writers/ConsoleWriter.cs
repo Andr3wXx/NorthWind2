@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Writers
 {
-    public class ConsoleWriter : IUserActionWriter
+    internal class ConsoleWriter : IUserActionWriter
     {
-        public void Write(UserAction action)
+        public void Writer(UserAction action)
         {
-           Debug.WriteLine("ConsoleWriter: {0}, {1}, {2}",
+            Console.WriteLine("ConsoleWriter: {0}, {1}, {2}",
                 action.CreateDateTime, action.User, action.Description);
         }
     }

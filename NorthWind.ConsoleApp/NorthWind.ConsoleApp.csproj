@@ -12,8 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NorthWind.Writers\NorthWind.Writers.csproj" />
-    <ProjectReference Include="..\NorthWind2.Entities\NorthWind2.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.IoC\NorthWind.IoC.csproj" />
   </ItemGroup>
 
 </Project>
